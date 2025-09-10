@@ -707,6 +707,7 @@ GameObject:
   - component: {fileID: 652404549}
   - component: {fileID: 652404552}
   - component: {fileID: 652404551}
+  - component: {fileID: 652404553}
   m_Layer: 5
   m_Name: FireTruck
   m_TagString: Fire
@@ -797,6 +798,19 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &652404553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652404547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7666759e562ff4c86bec8f9581c640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objScript: {fileID: 1424380894}
 --- !u!1 &656567729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,6 +1124,7 @@ GameObject:
   - component: {fileID: 963060591}
   - component: {fileID: 963060590}
   - component: {fileID: 963060589}
+  - component: {fileID: 963060593}
   m_Layer: 5
   m_Name: Excavator
   m_TagString: Excavator
@@ -1200,6 +1215,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963060587}
   m_CullTransparentMesh: 1
+--- !u!114 &963060593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963060587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7666759e562ff4c86bec8f9581c640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objScript: {fileID: 1424380894}
 --- !u!1 &1035339250
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,6 +1316,7 @@ GameObject:
   - component: {fileID: 1055867718}
   - component: {fileID: 1055867717}
   - component: {fileID: 1055867716}
+  - component: {fileID: 1055867721}
   m_Layer: 5
   m_Name: Tractor5
   m_TagString: Tractor5
@@ -1378,6 +1407,19 @@ RectTransform:
   m_AnchoredPosition: {x: -144, y: -460}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1055867721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055867715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7666759e562ff4c86bec8f9581c640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objScript: {fileID: 1424380894}
 --- !u!1 &1153393084
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,6 +1512,7 @@ GameObject:
   - component: {fileID: 1223452511}
   - component: {fileID: 1223452514}
   - component: {fileID: 1223452513}
+  - component: {fileID: 1223452515}
   m_Layer: 5
   m_Name: Ambulance
   m_TagString: Medicine
@@ -1560,6 +1603,19 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1223452515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223452509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7666759e562ff4c86bec8f9581c640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objScript: {fileID: 1424380894}
 --- !u!1 &1239984466
 GameObject:
   m_ObjectHideFlags: 0
@@ -1573,6 +1629,7 @@ GameObject:
   - component: {fileID: 1239984470}
   - component: {fileID: 1239984469}
   - component: {fileID: 1239984468}
+  - component: {fileID: 1239984472}
   m_Layer: 5
   m_Name: e61
   m_TagString: e61
@@ -1663,6 +1720,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1239984466}
   m_CullTransparentMesh: 1
+--- !u!114 &1239984472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239984466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7666759e562ff4c86bec8f9581c640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objScript: {fileID: 1424380894}
 --- !u!1 &1270216112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1751,6 +1821,7 @@ GameObject:
   - component: {fileID: 1319116808}
   - component: {fileID: 1319116807}
   - component: {fileID: 1319116806}
+  - component: {fileID: 1319116810}
   m_Layer: 5
   m_Name: Cement
   m_TagString: Cement
@@ -1841,6 +1912,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1319116804}
   m_CullTransparentMesh: 1
+--- !u!114 &1319116810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319116804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7666759e562ff4c86bec8f9581c640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objScript: {fileID: 1424380894}
 --- !u!1 &1323056847
 GameObject:
   m_ObjectHideFlags: 0
@@ -1854,6 +1938,7 @@ GameObject:
   - component: {fileID: 1323056851}
   - component: {fileID: 1323056850}
   - component: {fileID: 1323056849}
+  - component: {fileID: 1323056853}
   m_Layer: 5
   m_Name: e46
   m_TagString: e46
@@ -1944,6 +2029,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1323056847}
   m_CullTransparentMesh: 1
+--- !u!114 &1323056853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323056847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7666759e562ff4c86bec8f9581c640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objScript: {fileID: 1424380894}
 --- !u!1 &1424380893
 GameObject:
   m_ObjectHideFlags: 0
@@ -2170,6 +2268,7 @@ GameObject:
   - component: {fileID: 1485713836}
   - component: {fileID: 1485713835}
   - component: {fileID: 1485713834}
+  - component: {fileID: 1485713838}
   m_Layer: 5
   m_Name: Police
   m_TagString: Police
@@ -2260,6 +2359,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485713832}
   m_CullTransparentMesh: 1
+--- !u!114 &1485713838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485713832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7666759e562ff4c86bec8f9581c640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objScript: {fileID: 1424380894}
 --- !u!1 &1567067634
 GameObject:
   m_ObjectHideFlags: 0
@@ -2348,6 +2460,7 @@ GameObject:
   - component: {fileID: 1570460961}
   - component: {fileID: 1570460960}
   - component: {fileID: 1570460959}
+  - component: {fileID: 1570460963}
   m_Layer: 5
   m_Name: Tractor1
   m_TagString: Tractor1
@@ -2438,6 +2551,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1570460957}
   m_CullTransparentMesh: 1
+--- !u!114 &1570460963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570460957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7666759e562ff4c86bec8f9581c640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objScript: {fileID: 1424380894}
 --- !u!1 &1599007821
 GameObject:
   m_ObjectHideFlags: 0
@@ -2577,6 +2703,7 @@ GameObject:
   - component: {fileID: 1728727821}
   - component: {fileID: 1728727820}
   - component: {fileID: 1728727819}
+  - component: {fileID: 1728727823}
   m_Layer: 5
   m_Name: B2
   m_TagString: B2
@@ -2667,6 +2794,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1728727817}
   m_CullTransparentMesh: 1
+--- !u!114 &1728727823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728727817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7666759e562ff4c86bec8f9581c640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objScript: {fileID: 1424380894}
 --- !u!1 &1731356383
 GameObject:
   m_ObjectHideFlags: 0
@@ -2755,6 +2895,7 @@ GameObject:
   - component: {fileID: 1797577863}
   - component: {fileID: 1797577862}
   - component: {fileID: 1797577861}
+  - component: {fileID: 1797577865}
   m_Layer: 5
   m_Name: SchoolBus
   m_TagString: School
@@ -2845,6 +2986,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1797577859}
   m_CullTransparentMesh: 1
+--- !u!114 &1797577865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797577859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7666759e562ff4c86bec8f9581c640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objScript: {fileID: 1424380894}
 --- !u!1 &1862501342
 GameObject:
   m_ObjectHideFlags: 0
@@ -2933,6 +3087,7 @@ GameObject:
   - component: {fileID: 1972985848}
   - component: {fileID: 1972985851}
   - component: {fileID: 1972985850}
+  - component: {fileID: 1972985852}
   m_Layer: 5
   m_Name: GarbageTruck
   m_TagString: Garbage
@@ -3023,6 +3178,19 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1972985852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972985846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7666759e562ff4c86bec8f9581c640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objScript: {fileID: 1424380894}
 --- !u!1 &2007776513
 GameObject:
   m_ObjectHideFlags: 0

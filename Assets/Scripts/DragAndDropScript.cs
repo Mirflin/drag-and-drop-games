@@ -43,11 +43,31 @@ public class DragAndDropScript : MonoBehaviour, IDragHandler, IBeginDragHandler,
     }
     public void OnDrag(PointerEventData eventData)
     {
-
+        if(Input.GetMouseButton(0) && !Input.GetMouseButton(1) && !Input.GetMouseButton(2))
+        {
+            Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z);
+            Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + screenBou.offset;
+            rectTra.position = screenBou.GetClampedPosition(curPosition);
+        }
     }
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (Input.GetMouseButtonUp(0))
+        {
+            objectScr.lastDragged = eventData.pointerDrag;
+            canvasGro.blocksRaycasts = true;
+            canvasGro.alpha = 1.0f;
 
+            if (objectScr.rightPlace)
+            {
+                canvasGro.blocksRaycasts = false;
+                objectScr.lastDragged = null;
+
+            }
+
+            objectScr.rightPlace = false;
+
+        }
     }
             
     // Update is called once per frame - 2 frames - 3 frames - 4 frames - 5 frames - 6 frames
