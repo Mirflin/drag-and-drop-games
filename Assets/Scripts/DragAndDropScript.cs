@@ -8,7 +8,7 @@ public class DragAndDropScript : MonoBehaviour, IDragHandler, IBeginDragHandler,
 {
     private CanvasGroup canvasGro;
     private RectTransform rectTra;
-    public ObjectScript objectScr;
+    public ObjectScript objScr;
     public ScreenBoundriesScript screenBou;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -23,7 +23,7 @@ public class DragAndDropScript : MonoBehaviour, IDragHandler, IBeginDragHandler,
         if((Input.GetMouseButton(0) && !Input.GetMouseButtonDown(1) && !Input.GetMouseButtonDown(2))) 
         {
             Debug.Log("OnPointerDown");
-            objectScr.effects.PlayOneShot(objectScr.audioCli[0]);
+            objScr.effects.PlayOneShot(objScr.audioCli[0]);
         }
         
     }
@@ -31,10 +31,15 @@ public class DragAndDropScript : MonoBehaviour, IDragHandler, IBeginDragHandler,
     {
         if ((Input.GetMouseButton(0) && !Input.GetMouseButtonDown(1) && !Input.GetMouseButtonDown(2)))
         {
-            objectScr.lastDragged = null;
+            ObjectScript.drag = true;
+            ObjectScript.lastDragged = null;
             canvasGro.blocksRaycasts = false;
             canvasGro.alpha = 0.6f;
-            rectTra.SetAsLastSibling();
+            // rectTra.SetAsLastSibling();
+            int lastIndex = transform.parent.childCount - 1;
+            int position = Mathf.Max(0, lastIndex - 1);
+            transform.SetSiblingIndex(position);
+
             Vector3 cursorWorldPos = Camera.main.ScreenToWorldPoint(new Vector3 (Input.mousePosition.x,Input.mousePosition.y, screenBou.screenPoint.z));
             rectTra.position = cursorWorldPos;
             screenBou.screenPoint = Camera.main.WorldToScreenPoint(rectTra.localPosition);
@@ -54,18 +59,18 @@ public class DragAndDropScript : MonoBehaviour, IDragHandler, IBeginDragHandler,
     {
         if (Input.GetMouseButtonUp(0))
         {
-            objectScr.lastDragged = eventData.pointerDrag;
+            ObjectScript.drag = false;
             canvasGro.blocksRaycasts = true;
             canvasGro.alpha = 1.0f;
 
-            if (objectScr.rightPlace)
+            if (objScr.rightPlace)
             {
                 canvasGro.blocksRaycasts = false;
-                objectScr.lastDragged = null;
+                ObjectScript.lastDragged = null;
 
             }
 
-            objectScr.rightPlace = false;
+            objScr.rightPlace = false;
 
         }
     }
