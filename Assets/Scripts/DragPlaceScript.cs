@@ -103,7 +103,7 @@ public class DragPlaceScript : MonoBehaviour, IDropHandler
                         objScript.vehicles[9].GetComponent<RectTransform>().localPosition = objScript.startCoordinates[8];
                         break;
                     case "Excavator":
-                        objScript.vehicles[8].GetComponent<RectTransform>().localPosition = objScript.startCoordinates[4];
+                        objScript.vehicles[8].GetComponent<RectTransform>().localPosition = objScript.startCoordinates[9];
                         break;
                     case "Cement":
                         objScript.vehicles[5].GetComponent<RectTransform>().localPosition = objScript.startCoordinates[5];
@@ -112,13 +112,13 @@ public class DragPlaceScript : MonoBehaviour, IDropHandler
                         objScript.vehicles[3].GetComponent<RectTransform>().localPosition = objScript.startCoordinates[3];
                         break;
                     case "B2":
-                        objScript.vehicles[4].GetComponent<RectTransform>().localPosition = objScript.startCoordinates[7];
+                        objScript.vehicles[4].GetComponent<RectTransform>().localPosition = objScript.startCoordinates[4];
                         break;
                     case "e46":
-                        objScript.vehicles[6].GetComponent<RectTransform>().localPosition = objScript.startCoordinates[8];
+                        objScript.vehicles[6].GetComponent<RectTransform>().localPosition = objScript.startCoordinates[6];
                         break;
                     case "e61":
-                        objScript.vehicles[7].GetComponent<RectTransform>().localPosition = objScript.startCoordinates[9];
+                        objScript.vehicles[7].GetComponent<RectTransform>().localPosition = objScript.startCoordinates[7];
                         break;
                     case "Tractor1":
                         objScript.vehicles[10].GetComponent<RectTransform>().localPosition = objScript.startCoordinates[10];
