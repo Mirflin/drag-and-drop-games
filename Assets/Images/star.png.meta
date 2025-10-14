@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 486a23f5e1c0b534eba597848053534d
+guid: 61e96687d6ff1814a8964daf6fd5964c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3090341677885324903
-    second: chiken_0
+      213: 4815476061570213978
+    second: star_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chiken_0
+      name: star_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 10
-        width: 428
-        height: 697
+        x: 0
+        y: 9
+        width: 600
+        height: 579
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 76e70f8f16913ea20800000000000000
-      internalID: 3090341677885324903
+      spriteID: a582a4ae6f104d240800000000000000
+      internalID: 4815476061570213978
       vertices: []
       indices: 
       edges: []

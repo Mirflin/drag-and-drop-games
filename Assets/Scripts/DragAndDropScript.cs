@@ -32,7 +32,7 @@ public class DragAndDropScript : MonoBehaviour, IDragHandler, IBeginDragHandler,
         if ((Input.GetMouseButton(0) && !Input.GetMouseButtonDown(1) && !Input.GetMouseButtonDown(2)))
         {
             ObjectScript.drag = true;
-            ObjectScript.lastDragged = null;
+            ObjectScript.lastDragged = gameObject;
             canvasGro.blocksRaycasts = false;
             canvasGro.alpha = 0.6f;
             // rectTra.SetAsLastSibling();

@@ -33,6 +33,8 @@ public class DragPlaceScript : MonoBehaviour, IDropHandler
                 if((rotDiff <= 5) || (rotDiff >= 355 && rotDiff <= 360) && (xSizeDiff <= 0.05 && ySizeDiff <= 0.05)){
                     Debug.Log("Correct place");
                     objScript.rightPlace = true;
+                    ObjectScript.lastDragged = null;
+                    ObjectScript.correctCount++;
                     eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
 
                     eventData.pointerDrag.GetComponent<RectTransform>().localRotation = GetComponent<RectTransform>().localRotation;
