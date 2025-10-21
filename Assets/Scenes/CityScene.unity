@@ -3258,6 +3258,7 @@ GameObject:
   - component: {fileID: 1424380898}
   - component: {fileID: 1424380899}
   - component: {fileID: 1424380900}
+  - component: {fileID: 1424380901}
   m_Layer: 0
   m_Name: ScriptHolder
   m_TagString: Untagged
@@ -3406,6 +3407,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1a4dd4b0d6f0d3478e7fee371d0a2fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1424380901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424380893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8efa0f364f39943b7f3f34b5a7e6be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  area: {fileID: 663097454}
+  objectsToPlace:
+  - {fileID: 656567729}
+  - {fileID: 215950840}
+  - {fileID: 1035339250}
+  - {fileID: 689376287}
+  - {fileID: 1567067634}
+  - {fileID: 1270216112}
+  - {fileID: 341578900}
+  - {fileID: 1731356383}
+  - {fileID: 2007776513}
+  - {fileID: 865965418}
+  - {fileID: 1862501342}
+  - {fileID: 517065696}
+  padding: 20
+  minDistance: 50
+  maxAttempts: 50
+  randomizeOnStart: 1
 --- !u!1 &1472387434
 GameObject:
   m_ObjectHideFlags: 0
