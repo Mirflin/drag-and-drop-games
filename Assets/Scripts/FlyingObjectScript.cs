@@ -199,6 +199,7 @@ public class FlyingObjectsScript : MonoBehaviour
             target.transform.rotation = Quaternion.Euler(0f, 0f, angle);
             yield return null;
         }
+        ObjectScript.incorrectCount = ObjectScript.incorrectCount + 1;
         Destroy(target);
     }
 
