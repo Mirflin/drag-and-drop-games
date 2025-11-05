@@ -10,27 +10,27 @@ public class DragPlaceScript : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        if((eventData.pointerDrag != null) && Input.GetMouseButtonUp(0) && !Input.GetMouseButton(1) && !Input.GetMouseButton(2))
+        if (eventData.pointerDrag == null)
+            return;
+        if (eventData.pointerDrag.tag.Equals(tag))
         {
-            if (eventData.pointerDrag.tag.Equals(tag))
-            {
-                placeZRot = eventData.pointerDrag.GetComponent<RectTransform>().transform.eulerAngles.z;
-                vehicleZRot = GetComponent<RectTransform>().transform.eulerAngles.z;
+            placeZRot =
+                 eventData.pointerDrag.GetComponent<RectTransform>().transform.eulerAngles.z;
 
-                rotDiff = Mathf.Abs(placeZRot - vehicleZRot);
+            vehicleZRot =
+                GetComponent<RectTransform>().transform.eulerAngles.z;
 
-                Debug.Log(rotDiff);
+            rotDiff = Mathf.Abs(placeZRot - vehicleZRot);
+            Debug.Log("Rotation difference: " + rotDiff);
 
-                placeSiz = eventData.pointerDrag.GetComponent<RectTransform>().localScale;
+            placeSiz = eventData.pointerDrag.GetComponent<RectTransform>().localScale;
+            vehicleSiz = GetComponent<RectTransform>().localScale;
+            xSizeDiff = Mathf.Abs(placeSiz.x - vehicleSiz.x);
+            ySizeDiff = Mathf.Abs(placeSiz.y - vehicleSiz.y);
+            Debug.Log("X size difference: " + xSizeDiff);
+            Debug.Log("Y size difference: " + ySizeDiff);
 
-                vehicleSiz = GetComponent<RectTransform>().localScale;
-
-                xSizeDiff = Mathf.Abs(placeSiz.x - vehicleSiz.x);
-                ySizeDiff = Mathf.Abs(placeSiz.y - vehicleSiz.y);
-                Debug.Log(xSizeDiff);
-                Debug.Log(ySizeDiff);
-
-                if((rotDiff <= 5) || (rotDiff >= 355 && rotDiff <= 360) && (xSizeDiff <= 0.05 && ySizeDiff <= 0.05)){
+            if ((rotDiff <= 5) || (rotDiff >= 355 && rotDiff <= 360) && (xSizeDiff <= 0.05 && ySizeDiff <= 0.05)){
                     Debug.Log("Correct place");
                     objScript.rightPlace = true;
                     ObjectScript.lastDragged = null;
@@ -132,11 +132,14 @@ public class DragPlaceScript : MonoBehaviour, IDropHandler
                         Debug.Log("Unknown tag detected!");
                         break;
                 }
-            }
+            
         }
     }
     void Start()
     {
-
+        if (objScript == null)
+        {
+            objScript = Object.FindFirstObjectByType<ObjectScript>();
+        }
     }
 }

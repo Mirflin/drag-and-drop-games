@@ -1,6 +1,5 @@
 using UnityEngine;
 
-//CHANGES NOT NEEDED FOR ANDROID
 public class FlyingObjectSpawnScript : MonoBehaviour
 {
     ScreenBoundriesScript screenBoundriesScript;
@@ -38,8 +37,8 @@ public class FlyingObjectSpawnScript : MonoBehaviour
         GameObject cloud =
             Instantiate(cloudPrefab, spawnPosition, Quaternion.identity, spawnPoint);
         float movementSpeed = Random.Range(cloudMinSpeed, cloudMaxSpeed);
-        ObstaclesControllerScript controller =
-            cloud.GetComponent<ObstaclesControllerScript>();
+        FlyingObjectsScript controller =
+            cloud.GetComponent<FlyingObjectsScript>();
         controller.speed = movementSpeed;
 
     }
@@ -51,14 +50,12 @@ public class FlyingObjectSpawnScript : MonoBehaviour
 
         GameObject objectPrefab = objectPrefabs[Random.Range(0, objectPrefabs.Length)];
         float y = Random.Range(minY, maxY);
-
         Vector3 spawnPosition = new Vector3(-spawnPoint.position.x, y, spawnPoint.position.z);
-
         GameObject flyingObject =
             Instantiate(objectPrefab, spawnPosition, Quaternion.identity, spawnPoint);
         float movementSpeed = Random.Range(objectMinSpeed, objectMaxSpeed);
-        ObstaclesControllerScript controller =
-            flyingObject.GetComponent<ObstaclesControllerScript>();
+        FlyingObjectsScript controller =
+            flyingObject.GetComponent<FlyingObjectsScript>();
         controller.speed = -movementSpeed;
     }
 }
