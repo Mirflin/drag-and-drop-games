@@ -44,7 +44,6 @@ public class CameraScript : MonoBehaviour
     void Update()
     {
         if (TransformationScript.isTransforming) {
-            Debug.Log("transforming");
             return;
         }
 
@@ -79,7 +78,7 @@ public class CameraScript : MonoBehaviour
 
         //Remember to change for slowmotion
         transform.position =
-            Vector3.Lerp(transform.position, desired, mouseFollowSpeed * Time.deltaTime);
+            Vector3.Lerp(transform.position, desired, mouseFollowSpeed * Time.unscaleDeltaTime);
     }
 
     void HandleTouch()
@@ -175,7 +174,7 @@ public class CameraScript : MonoBehaviour
         while (elapsed < duration)
         {
             // Remember to hange for slowmotion
-            elapsed += Time.deltaTime;
+            elapsed += Time.unscaledDeltaTime;
 
             cam.orthographicSize = Mathf.Lerp(initialZoom, targetZoom, elapsed / duration);
             screenBoundries.RecalculateBounds();
