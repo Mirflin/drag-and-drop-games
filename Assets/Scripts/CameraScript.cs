@@ -78,7 +78,7 @@ public class CameraScript : MonoBehaviour
 
         //Remember to change for slowmotion
         transform.position =
-            Vector3.Lerp(transform.position, desired, mouseFollowSpeed * Time.unscaleDeltaTime);
+            Vector3.Lerp(transform.position, desired, mouseFollowSpeed * Time.unscaledDeltaTime);
     }
 
     void HandleTouch()

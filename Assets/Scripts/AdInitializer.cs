@@ -1,15 +1,15 @@
 using System;
-using UnityEditor.Advertisements;
 using UnityEngine;
+using UnityEngine.Advertisements;
 
-public class AdInitializer : MonoBehaviour, IUnityAdsInitializationListener
+public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener
 {
     [SerializeField] string _androidGameId;
     [SerializeField] bool _testMode = true;
     private string _gameId;
     public event Action OnAdsInitialized;
 
-    public void Awake()
+    private void Awake()
     {
         InitializeAds();
     }
@@ -19,24 +19,19 @@ public class AdInitializer : MonoBehaviour, IUnityAdsInitializationListener
 #if UNITY_ANDROID || UNITY_EDITOR
         _gameId = _androidGameId;
 #endif
-        if(!Advertisement.isInitialized && Advertisement.isSupported)
-        {
+
+        if (!Advertisement.isInitialized && Advertisement.isSupported)
             Advertisement.Initialize(_gameId, _testMode, this);
-        }
     }
 
     public void OnInitializationComplete()
     {
-        Debug.Log("Init complete");
+        Debug.Log("Unity ads initialization complete!");
         OnAdsInitialized?.Invoke();
     }
 
     public void OnInitializationFailed(UnityAdsInitializationError error, string message)
     {
-        Debug.Log($"Unity ads initialization failed: { error.ToSring()} - { message }");
-    }
-    public void UnityAdsInitializationError(UnityAdsInitializationError error, string message)
-    {
-        Debug.Log($"Unity ads initialization failed: {error.ToSring()} - {message}");
+        Debug.LogWarning($"Unity ads initialization failed: {error.ToString()} - {message}");
     }
 }
