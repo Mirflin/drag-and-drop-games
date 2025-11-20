@@ -920,6 +920,8 @@ GameObject:
   - component: {fileID: 1371561823}
   - component: {fileID: 1371561824}
   - component: {fileID: 1371561822}
+  - component: {fileID: 1371561827}
+  - component: {fileID: 1371561826}
   m_Layer: 0
   m_Name: Adds
   m_TagString: Untagged
@@ -956,6 +958,10 @@ MonoBehaviour:
   adsInitializer: {fileID: 1371561824}
   interstitialAd: {fileID: 1371561822}
   turnOffInterstitialAd: 0
+  rewardedAds: {fileID: 1371561827}
+  turnOffRewardedAds: 0
+  bannerAd: {fileID: 1371561826}
+  turnOffBannerAd: 0
 --- !u!114 &1371561824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -985,6 +991,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1371561826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371561821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c87b2607d11f69429e37aba7e73c4a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidAdUnitId: Banner_Android
+  isBannerVisible: 0
+  _bannerPosition: 4
+--- !u!114 &1371561827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371561821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1418cc83eafb7364b90c432f93d8f07d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidAdUnitId: Rewarded_Android
+  _rewardedAdButton: {fileID: 0}
+  flayingObjectManager: {fileID: 1788719860}
 --- !u!1 &1405075910
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,6 +1256,7 @@ GameObject:
   - component: {fileID: 1788719858}
   - component: {fileID: 1788719857}
   - component: {fileID: 1788719859}
+  - component: {fileID: 1788719860}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -1351,6 +1388,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1788719860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788719856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97499d07477fa6a4e90c3d8e65596de8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1989235982
 GameObject:
   m_ObjectHideFlags: 0
