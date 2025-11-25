@@ -13,6 +13,11 @@ public class SceneChanger : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void goToHanoi()
+    {
+        SceneManager.LoadScene("Play");
+    }
+
     public void Gameexit()
     {
         Debug.Log("exit");
