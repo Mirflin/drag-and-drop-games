@@ -17,3 +17,9 @@ Unity 2D Drag And Drop games for children
 
 # Car game
 <img width="1676" height="942" alt="image" src="https://github.com/user-attachments/assets/7f9abf36-cde2-480f-bcde-e77c45ab8be0" />
+
+# Hanojas torni
+<img width="1623" height="843" alt="image" src="https://github.com/user-attachments/assets/ee71bc87-ecd0-480c-98b5-868d848ef0bc" />
+
+
+<img width="1594" height="795" alt="image" src="https://github.com/user-attachments/assets/9234e33c-0505-4af1-93c3-e42e3088a42c" />
