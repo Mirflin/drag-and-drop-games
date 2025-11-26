@@ -28,8 +28,13 @@ public class GameSetup : MonoBehaviour {
     [Range(0.1f, 1.99f)]
     private float diskScaling;
 
+    // Base materials for rendered geometry
+    [Header("Materials")]
     [SerializeField]
-    private Material defaultLineMaterial; // assign "Default-line" in the inspector
+    private Material poleMaterial; // e.g., assign a "Drawed-line" style material in the Inspector
+
+    [SerializeField]
+    private Material diskMaterial; // e.g., assign a "Drawed-line" style material in the Inspector
 
     public Vector3 diskOffset {
         get => _diskOffset;
@@ -47,10 +52,11 @@ public class GameSetup : MonoBehaviour {
             poles[i] = Instantiate(polePrefab);
             poles[i].transform.position = Vector3.right * (i * (4 + poleSpacing));
 
-            // Apply material to all renderers on the spawned pole (and its children)
-            if (defaultLineMaterial != null) {
-                foreach (var r in poles[i].GetComponentsInChildren<Renderer>()) {
-                    r.material = defaultLineMaterial;
+            // Apply base material to the pole renderer (if available)
+            if (poleMaterial != null) {
+                var poleRenderer = poles[i].GetComponentInChildren<Renderer>();
+                if (poleRenderer != null) {
+                    poleRenderer.material = poleMaterial;
                 }
             }
         }
@@ -62,10 +68,11 @@ public class GameSetup : MonoBehaviour {
             disk.scale = 4 - i * diskScaling;
             disk.size = i;
 
-            // Apply material to all renderers on the spawned disk (and its children)
-            if (defaultLineMaterial != null) {
-                foreach (var r in disk.GetComponentsInChildren<Renderer>()) {
-                    r.material = defaultLineMaterial;
+            // Apply base material to the disk renderer (if available)
+            if (diskMaterial != null) {
+                var diskRenderer = disk.GetComponentInChildren<Renderer>();
+                if (diskRenderer != null) {
+                    diskRenderer.material = diskMaterial;
                 }
             }
 

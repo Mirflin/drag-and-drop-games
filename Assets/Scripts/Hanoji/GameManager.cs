@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class GameManager : GameSetup {
     private Disk _selectedDisk;
 
+    [Header("UI")]
+    [SerializeField]
+    private GameObject completionPanel;
+
     public Disk selectedDisk {
         get => _selectedDisk;
         set => _selectedDisk = value;
@@ -16,15 +20,26 @@ public class GameManager : GameSetup {
         for (int i = 0; i < poles.Length; i++) poles[i].gameManager = this;
     }
 
-    public void CheckForCompletion() {
-        if (poles[poleCount - 1].disks.Count >= poleCount) {
+    public void Update()
+    {
+        CheckForCompletion();
+    }
+
+    public void CheckForCompletion()
+    {
+        if (poles[poleCount - 1].disks.Count >= poleCount)
+        {
             Debug.Log("Gameover!");
-            StartCoroutine(ReloadScene());
+            Time.timeScale = 0f;
+            if (completionPanel != null)
+            {
+                completionPanel.SetActive(true);
+            }
         }
     }
 
-    private IEnumerator ReloadScene() {
-        yield return new WaitForSecondsRealtime(1.6f);
+    public void ReloadScene() {
+        Time.timeScale = 1f;
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
     }
